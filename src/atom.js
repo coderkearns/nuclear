@@ -24,13 +24,3 @@ function atom(defaultValue) {
 }
 
 module.exports = { atom }
-
-const count = atom(0)
-
-count.subscribe((newValue, oldValue) => {
-    console.log(`count=${newValue}, oldCount=${oldValue}`)
-})
-
-count.set(1)
-count.set(c => c + 1)
-console.log(count())
