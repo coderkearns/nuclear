@@ -1,12 +1,8 @@
 {
-  "name": "nuclear",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "nuclear",
+    "version": "1.0.0",
+    "description": "Simple, framework-antagonist, and scientific reactive functionality with zero magic.",
+    "main": "./src/index.js",
+    "types": "./types/index.d.ts",
+    "license": "MIT"
 }
