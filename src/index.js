@@ -1,5 +1,1 @@
-const { atom } = require("./atom")
-
-module.exports = {
-    atom
-}
+export { atom } from "./atom"

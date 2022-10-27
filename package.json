@@ -2,6 +2,7 @@
     "name": "nuclear",
     "version": "1.0.0",
     "description": "Simple, framework-antagonist, and scientific reactive functionality with zero magic.",
+    "type": "module",
     "main": "./src/index.js",
     "types": "./types/index.d.ts",
     "license": "MIT"

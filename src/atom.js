@@ -1,4 +1,4 @@
-function atom(defaultValue) {
+export function atom(defaultValue) {
     let currentValue = defaultValue
 
     const _atom = () => currentValue
@@ -14,7 +14,7 @@ function atom(defaultValue) {
             newValue = newValue(currentValue)
         }
 
-        oldValue = currentValue
+        let oldValue = currentValue
         currentValue = newValue
 
         listeners.forEach(fn => fn(newValue, oldValue))
@@ -22,5 +22,3 @@ function atom(defaultValue) {
 
     return _atom
 }
-
-module.exports = { atom }
