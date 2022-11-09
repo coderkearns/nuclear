@@ -4,10 +4,9 @@ export interface Subscription<Args extends any[] = any[]> {
 }
 
 type ValueOrFn<T> = T | ((T) => T)
-
-export function atom<T>(defaultValue: T): Subscription<
-	[newValue: T, oldValue: T]
-> & {
-	get: () => T
-	set: (newValue: ValueOrFn<T>) => void
+type Atom<T> = Subscription<[newValue: T, oldValue: T]> & {
+    get: () => T
+    set: (newValue: ValueOrFn<T>) => void
 }
+
+export function atom<T>(defaultValue: T): Atom<T>
