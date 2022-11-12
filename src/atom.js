@@ -1,4 +1,4 @@
-import { extendSubscription } from "./shared"
+import { extendSubscription } from "./shared.js"
 
 const PROTO_ATOM = extendSubscription({
     value: null,
@@ -15,6 +15,7 @@ const PROTO_ATOM = extendSubscription({
 
 export function atom(defaultValue) {
     const _atom = Object.create(PROTO_ATOM)
+    _atom._listeners = []
     _atom.value = defaultValue
     return _atom
 }
