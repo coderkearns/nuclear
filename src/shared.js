@@ -9,6 +9,9 @@ const PROTO_SUBSCRIPTION = {
     publish(...args) {
         this._listeners.forEach(l => l(...args))
     },
+    toString() {
+        return `Subscription(listeners=${this._listeners.length})`
+    },
 }
 
 export function extendSubscription(newProto) {

@@ -10,6 +10,9 @@ const PROTO_DERIVED = extendSubscription({
         this.value = this.fn()
         this.publish()
     },
+    toString() {
+        return `Derived(${this.value}, listeners=${this._listeners.length})`
+    },
 })
 
 export function derived(fn, dependencies = []) {

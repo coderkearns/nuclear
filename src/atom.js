@@ -11,6 +11,9 @@ const PROTO_ATOM = extendSubscription({
             typeof newValue === "function" ? newValue(oldValue) : newValue
         this.publish(this.value, oldValue)
     },
+    toString() {
+        return `Atom(${this.value}, listeners=${this._listeners.length})`
+    },
 })
 
 export function atom(defaultValue) {
