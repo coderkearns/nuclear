@@ -1,6 +1,6 @@
 {
     "name": "nuclear",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Simple, framework-antagonist, and scientific reactive functionality with zero magic.",
     "type": "module",
     "main": "./src/index.js",

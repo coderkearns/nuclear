@@ -1,8 +1,6 @@
-import { Subscription } from "./shared"
+import { Subscription, ValueSubscription } from "./shared"
 
-export interface Derived<T> extends Subscription<[]> {
-    get: () => T
-}
+export type Derived<T> = ValueSubscription<T, []>
 
 export function derived<T>(
     fn: () => T,
